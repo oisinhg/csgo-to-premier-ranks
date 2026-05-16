@@ -68,6 +68,23 @@ caption {
     height: 1.85rem;
 }
 
+.rank-name {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+tr:hover .rank-name {
+    max-height: 2rem;
+}
+
+tr:hover {
+    filter: brightness(1.2);
+}
+
 h5 {
     margin: 0;
     text-transform: uppercase;

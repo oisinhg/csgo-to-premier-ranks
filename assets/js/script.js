@@ -1,29 +1,29 @@
 const csgoRanks = [
     // SILVER
-    { group: "silver", img: "silver1.svg", percentile: 4.2 },
-    { group: "silver", img: "silver2.svg", percentile: 4.28 },
-    { group: "silver", img: "silver3.svg", percentile: 4.38 },
-    { group: "silver", img: "silver4.svg", percentile: 5.29 },
-    { group: "silver", img: "silverE.svg", percentile: 6.57 },
-    { group: "silver", img: "silverEM.svg", percentile: 7.74 },
+    { group: "silver", img: "silver1.svg", percentile: 4.2, name: "Silver 1" },
+    { group: "silver", img: "silver2.svg", percentile: 4.28, name: "Silver 2" },
+    { group: "silver", img: "silver3.svg", percentile: 4.38, name: "Silver 3" },
+    { group: "silver", img: "silver4.svg", percentile: 5.29, name: "Silver 4" },
+    { group: "silver", img: "silverE.svg", percentile: 6.57, name: "Silver Elite" },
+    { group: "silver", img: "silverEM.svg", percentile: 7.74, name: "Silver Elite Master" },
 
     // GOLD NOVA
-    { group: "nova", img: "nova1.svg", percentile: 8.64 },
-    { group: "nova", img: "nova2.svg", percentile: 8.8 },
-    { group: "nova", img: "nova3.svg", percentile: 8.89 },
-    { group: "nova", img: "novaM.svg", percentile: 8.125 },
+    { group: "nova", img: "nova1.svg", percentile: 8.64, name: "Gold Nova 1" },
+    { group: "nova", img: "nova2.svg", percentile: 8.8, name: "Gold Nova 2" },
+    { group: "nova", img: "nova3.svg", percentile: 8.89, name: "Gold Nova 3" },
+    { group: "nova", img: "novaM.svg", percentile: 8.125, name: "Gold Nova Master" },
 
     // MASTER GUARDIAN
-    { group: "mg", img: "mg1.svg", percentile: 7.47 },
-    { group: "mg", img: "mg2.svg", percentile: 6.455 },
-    { group: "mg", img: "mge.svg", percentile: 5.245 },
-    { group: "mg", img: "dmg.svg", percentile: 4.11 },
+    { group: "mg", img: "mg1.svg", percentile: 7.47, name: "Master Guardian 1" },
+    { group: "mg", img: "mg2.svg", percentile: 6.455, name: "Master Guardian 2" },
+    { group: "mg", img: "mge.svg", percentile: 5.245, name: "Master Guardian Elite" },
+    { group: "mg", img: "dmg.svg", percentile: 4.11, name: "Distinguished Master Guardian" },
 
     // EAGLE & ABOVE
-    { group: "eagle", img: "le.svg", percentile: 3.205 },
-    { group: "eagle", img: "lem.svg", percentile: 3.195 },
-    { group: "eagle", img: "smfc.svg", percentile: 2.625 },
-    { group: "global", img: "global.svg", percentile: 0.765 },
+    { group: "eagle", img: "le.svg", percentile: 3.205, name: "Legendary Eagle" },
+    { group: "eagle", img: "lem.svg", percentile: 3.195, name: "Legendary Eagle Master" },
+    { group: "eagle", img: "smfc.svg", percentile: 2.625, name: "Supreme Master First Class" },
+    { group: "global", img: "global.svg", percentile: 0.765, name: "The Global Elite" },
 ];
 
 const cs2Bands = [
@@ -108,7 +108,10 @@ function init() {
         const maxDisplay = rank.cs2max ? (rank.cs2max - 1).toLocaleString() : "30,000+";
 
         row.innerHTML = `
-            <td class="rank-icon"><img src="assets/images/${rank.img}"></td>
+            <td class="rank-icon">
+                <img src="assets/images/${rank.img}">
+                <span class="rank-name">${rank.name}</span>
+            </td>
             <td class="arrow-col">→</td>
             <td class="rating">
                 <span class="${ratingClass(rank.cs2min)}">${minDisplay}</span>
