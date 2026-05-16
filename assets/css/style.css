@@ -1,0 +1,141 @@
+/* */
+
+.outer-container {
+    padding: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 25px 0 50px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+caption {
+    text-transform: uppercase;
+}
+
+.rank-table {
+    border-collapse: separate;
+    border-spacing: 0px 5px;
+    width: 100%;
+}
+
+.rank-table th {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0 8px 0 8px;
+}
+
+.rank-table td {
+    padding: 8px;
+}
+
+.rank-table>tbody td:nth-child(1) {
+    border-radius: 6px 0 0 6px;
+    border-left: 3px solid var(--rank-border);
+    width: 40%;
+}
+
+.rank-table>tbody td:nth-child(2) {
+    width: 20%;
+    text-align: center;
+}
+
+.rank-table>tbody td:nth-child(3) {
+    border-radius: 0 6px 6px 0;
+    width: 40%;
+}
+
+.rating span {
+    font-weight: 500;
+}
+
+.inner-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 25px;
+}
+
+.inner-container>div {
+    flex: 1;
+}
+
+.rank-icon img {
+    height: 1.85rem;
+}
+
+h5 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 768px) {
+    .outer-container {
+        width: 80%;
+    }
+
+    .inner-container {
+        flex-direction: column;
+    }
+}
+
+/* Row color classes */
+tr.row-silver {
+    background-color: #c5c5c514;
+    --rank-border: #c5c5c5;
+}
+
+tr.row-nova {
+    background-color: #d4a84314;
+    --rank-border: #d4a843;
+}
+
+tr.row-mg {
+    background-color: #6e9e6e14;
+    --rank-border: #6e9e6e;
+}
+
+tr.row-eagle {
+    background-color: #c0892a14;
+    --rank-border: #c0892a;
+}
+
+tr.row-global {
+    background-color: #b32e1f14;
+    --rank-border: #b32e1f;
+}
+
+.rating-grey {
+    color: #94aab1;
+}
+
+.rating-lightblue {
+    color: #7cb9e7;
+}
+
+.rating-blue {
+    color: #5f81e5;
+}
+
+.rating-purple {
+    color: #bd6eef;
+}
+
+.rating-pink {
+    color: #f218ea;
+}
+
+.rating-red {
+    color: #fb514f;
+}
+
+.rating-gold {
+    color: #edd308;
+}
